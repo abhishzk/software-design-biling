@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.GridLayout;
+import java.awt.Image;
 
 import javax.swing.ImageIcon;
 import java.awt.Color;
@@ -309,15 +310,15 @@ public class Main_page extends JFrame {
 	 * Create the frame.
 	 */
 	public Main_page() {
-		setTitle("nullPanel\r\n");
+		setTitle("Billing System");
 		setForeground(Color.LIGHT_GRAY);
 		setBackground(Color.DARK_GRAY);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 998, 758);
 		contentPane = new JPanel();
-		contentPane.setForeground(Color.DARK_GRAY);
-		contentPane.setBackground(Color.DARK_GRAY);
+		contentPane.setForeground(SystemColor.activeCaptionText);
+		contentPane.setBackground(SystemColor.textHighlight);
 		contentPane.setBorder(new LineBorder(new Color(0, 0, 0), 6, true));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -332,7 +333,7 @@ public class Main_page extends JFrame {
 		
 		
 		txtItemId = new JTextField();
-		txtItemId.setForeground(Color.GRAY);
+		txtItemId.setForeground(Color.BLACK);
 		txtItemId.setBounds(10, 31, 61, 20);
 		
 		txtItemId.setColumns(10);
@@ -341,7 +342,7 @@ public class Main_page extends JFrame {
 		txtItemId.setEditable(false);
 		
 		txtItemName = new JTextField();
-		txtItemName.setForeground(SystemColor.desktop);
+		txtItemName.setForeground(Color.BLACK);
 		txtItemName.setText("Item Name");
 		txtItemName.setColumns(10);
 		txtItemName.setBounds(91, 31, 68, 20);
@@ -349,7 +350,7 @@ public class Main_page extends JFrame {
 		placehlder(txtItemName,txtItemName.getText());
 		
 		txtBatch = new JTextField();
-		txtBatch.setForeground(SystemColor.desktop);
+		txtBatch.setForeground(Color.BLACK);
 		txtBatch.setText("Batch");
 		txtBatch.setColumns(10);
 		txtBatch.setBounds(182, 31, 73, 20);
@@ -358,7 +359,7 @@ public class Main_page extends JFrame {
 		
 
 		txtExpDate = new JTextField();
-		txtExpDate.setForeground(SystemColor.desktop);
+		txtExpDate.setForeground(Color.BLACK);
 		txtExpDate.setText("Exp Date");
 		txtExpDate.setColumns(10);
 		txtExpDate.setBounds(273, 31, 61, 20);
@@ -367,7 +368,7 @@ public class Main_page extends JFrame {
 
 		
 		txtQty = new JTextField();
-		txtQty.setForeground(SystemColor.desktop);
+		txtQty.setForeground(Color.BLACK);
 		txtQty.setText("Qty");
 		txtQty.setColumns(10);
 		txtQty.setBounds(360, 31, 68, 20);
@@ -375,7 +376,7 @@ public class Main_page extends JFrame {
 		placehlder(txtQty,txtQty.getText());
 
 		txtRate = new JTextField();
-		txtRate.setForeground(SystemColor.desktop);
+		txtRate.setForeground(Color.BLACK);
 		txtRate.setText("Rate");
 		txtRate.setColumns(10);
 		txtRate.setBounds(438, 31, 61, 20);
@@ -389,7 +390,7 @@ public class Main_page extends JFrame {
 		panel_3.add(lblerrormessage);
 
 		txtTax = new JTextField();
-		txtTax.setForeground(SystemColor.desktop);
+		txtTax.setForeground(Color.BLACK);
 		txtTax.setText("Tax%");
 		txtTax.setColumns(10);
 		txtTax.setBounds(509, 31, 61, 20);
@@ -403,7 +404,8 @@ public class Main_page extends JFrame {
 		 String[] columnNames = { "Item ID", "Item Name", "Batch" ,"Exp","Qty","Rate","Amount","Tax%","Tax"}; 
 		DefaultTableModel model = new DefaultTableModel();
 		table = new JTable(model);
-		table.setBackground(SystemColor.info);
+		table.setForeground(Color.WHITE);
+		table.setBackground(Color.BLACK);
 		table.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		table.setSurrendersFocusOnKeystroke(true);
 		table.setFillsViewportHeight(true);
@@ -427,8 +429,8 @@ public class Main_page extends JFrame {
 		model.addRow(new Object[] { "Item ID", "Item Name", "Batch" ,"Exp","Qty","Rate","Tax%","Tax","Amount"});
 		
 		JButton btnAdd = new JButton("Add");
-		btnAdd.setBackground(Color.DARK_GRAY);
-		btnAdd.setForeground(SystemColor.activeCaption);
+		btnAdd.setBackground(Color.WHITE);
+		btnAdd.setForeground(Color.BLACK);
 		
 		btnAdd.setBounds(580, 30, 61, 23);
 		panel_3.add(btnAdd);
@@ -436,7 +438,7 @@ public class Main_page extends JFrame {
 		
 		txtNoOfItem = new JTextField();
 		txtNoOfItem.setBackground(SystemColor.activeCaption);
-		txtNoOfItem.setForeground(SystemColor.desktop);
+		txtNoOfItem.setForeground(Color.BLACK);
 		txtNoOfItem.setEditable(false);
 		txtNoOfItem.setText("No of Item");
 		txtNoOfItem.setColumns(10);
@@ -445,7 +447,7 @@ public class Main_page extends JFrame {
 		
 		Num_item = new JTextField();
 		Num_item.setBackground(Color.WHITE);
-		Num_item.setForeground(SystemColor.desktop);
+		Num_item.setForeground(Color.BLACK);
 		Num_item.setEditable(false);
 		Num_item.setBounds(81, 247, 68, 20);
 		panel_3.add(Num_item);
@@ -453,7 +455,7 @@ public class Main_page extends JFrame {
 		
 		txtQty_1 = new JTextField();
 		txtQty_1.setBackground(SystemColor.activeCaption);
-		txtQty_1.setForeground(SystemColor.desktop);
+		txtQty_1.setForeground(Color.BLACK);
 		txtQty_1.setEditable(false);
 		txtQty_1.setText("Qty");
 		txtQty_1.setColumns(10);
@@ -462,7 +464,7 @@ public class Main_page extends JFrame {
 		
 		net_qty = new JTextField();
 		net_qty.setBackground(Color.WHITE);
-		net_qty.setForeground(SystemColor.desktop);
+		net_qty.setForeground(Color.BLACK);
 		net_qty.setEditable(false);
 		net_qty.setColumns(10);
 		net_qty.setBounds(230, 247, 68, 20);
@@ -470,7 +472,7 @@ public class Main_page extends JFrame {
 		
 		txtTotal = new JTextField();
 		txtTotal.setBackground(SystemColor.activeCaption);
-		txtTotal.setForeground(SystemColor.desktop);
+		txtTotal.setForeground(Color.BLACK);
 		txtTotal.setEditable(false);
 		txtTotal.setText("Tax%");
 		txtTotal.setColumns(10);
@@ -479,7 +481,7 @@ public class Main_page extends JFrame {
 		
 		Net_taxper = new JTextField();
 		Net_taxper.setBackground(Color.WHITE);
-		Net_taxper.setForeground(SystemColor.desktop);
+		Net_taxper.setForeground(Color.BLACK);
 		Net_taxper.setEditable(false);
 		Net_taxper.setColumns(10);
 		Net_taxper.setBounds(574, 247, 68, 20);
@@ -487,7 +489,7 @@ public class Main_page extends JFrame {
 		
 		txtTax_1 = new JTextField();
 		txtTax_1.setBackground(SystemColor.activeCaption);
-		txtTax_1.setForeground(SystemColor.desktop);
+		txtTax_1.setForeground(Color.BLACK);
 		txtTax_1.setEditable(false);
 		txtTax_1.setText("Total");
 		txtTax_1.setColumns(10);
@@ -497,7 +499,7 @@ public class Main_page extends JFrame {
 		
 		Net_rate = new JTextField();
 		Net_rate.setBackground(Color.WHITE);
-		Net_rate.setForeground(SystemColor.desktop);
+		Net_rate.setForeground(Color.BLACK);
 		Net_rate.setEditable(false);
 		Net_rate.setColumns(10);
 		Net_rate.setBounds(751, 247, 68, 20);
@@ -505,7 +507,7 @@ public class Main_page extends JFrame {
 		
 		txtCash = new JTextField();
 		txtCash.setBackground(SystemColor.activeCaption);
-		txtCash.setForeground(SystemColor.desktop);
+		txtCash.setForeground(Color.BLACK);
 		txtCash.setEditable(false);
 		txtCash.setText("net_Tax");
 		txtCash.setColumns(10);
@@ -514,7 +516,7 @@ public class Main_page extends JFrame {
 		
 		Net_tax = new JTextField();
 		Net_tax.setBackground(Color.WHITE);
-		Net_tax.setForeground(SystemColor.desktop);
+		Net_tax.setForeground(Color.BLACK);
 		Net_tax.setEditable(false);
 		Net_tax.setColumns(10);
 		Net_tax.setBounds(574, 276, 68, 20);
@@ -522,7 +524,7 @@ public class Main_page extends JFrame {
 		
 		txtNetTotal = new JTextField();
 		txtNetTotal.setBackground(SystemColor.activeCaption);
-		txtNetTotal.setForeground(SystemColor.desktop);
+		txtNetTotal.setForeground(Color.BLACK);
 		txtNetTotal.setEditable(false);
 		txtNetTotal.setText("Net Total");
 		txtNetTotal.setColumns(10);
@@ -531,7 +533,7 @@ public class Main_page extends JFrame {
 		
 		Grand_total = new JTextField();
 		Grand_total.setBackground(Color.WHITE);
-		Grand_total.setForeground(SystemColor.desktop);
+		Grand_total.setForeground(Color.BLACK);
 		Grand_total.setEditable(false);
 		Grand_total.setColumns(10);
 		Grand_total.setBounds(680, 304, 139, 20);
@@ -553,7 +555,7 @@ public class Main_page extends JFrame {
 			
 		});
 		btnNewButton = new JButton("Print Bill");
-		btnNewButton.setForeground(SystemColor.activeCaption);
+		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnNewButton.setActionCommand("Print Bill");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -604,7 +606,7 @@ public class Main_page extends JFrame {
 	            JOptionPane.showMessageDialog(contentPane, "Bill is stored in your billing folder");
 		}
 		});
-		btnNewButton.setBackground(Color.DARK_GRAY);
+		btnNewButton.setBackground(Color.WHITE);
 		btnNewButton.setBounds(503, 307, 139, 23);
 		panel_3.add(btnNewButton);
 		
@@ -617,8 +619,8 @@ public class Main_page extends JFrame {
 		
 		
 		JButton btnExp = new JButton("Export");
-		btnExp.setBackground(Color.DARK_GRAY);
-		btnExp.setForeground(SystemColor.activeCaption);
+		btnExp.setBackground(Color.WHITE);
+		btnExp.setForeground(Color.BLACK);
 		btnExp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//txtItemId,txtItemName,txtBatch,txtExpDate,txtQty,txtRate,txtTax
@@ -706,8 +708,8 @@ public class Main_page extends JFrame {
 				Grand_total.setText("");
 			}
 		});
-		btnClr2.setBackground(Color.DARK_GRAY);
-		btnClr2.setForeground(SystemColor.activeCaption);
+		btnClr2.setBackground(Color.WHITE);
+		btnClr2.setForeground(Color.BLACK);
 		btnClr2.setBounds(751, 30, 89, 23);
 		panel_3.add(btnClr2);
 		
@@ -726,8 +728,8 @@ public class Main_page extends JFrame {
 		lblPatientsName.setFont(new Font("Calibri", Font.PLAIN, 14));
 		
 		PatientN = new JTextField();
-		PatientN.setForeground(SystemColor.desktop);
-		PatientN.setBounds(170, 29, 151, 20);
+		PatientN.setForeground(Color.BLACK);
+		PatientN.setBounds(158, 29, 163, 20);
 		panel_7.add(PatientN);
 		PatientN.setColumns(10);
 		PatientN.setBackground(Color.WHITE);
@@ -739,14 +741,14 @@ public class Main_page extends JFrame {
 		lblDoctorsName.setFont(new Font("Calibri", Font.PLAIN, 14));
 		
 		DocterN = new JTextField();
-		DocterN.setForeground(SystemColor.desktop);
-		DocterN.setBounds(170, 57, 151, 20);
+		DocterN.setForeground(Color.BLACK);
+		DocterN.setBounds(158, 57, 163, 20);
 		panel_7.add(DocterN);
 		DocterN.setColumns(10);
 		DocterN.setBackground(Color.WHITE);
 		
 		Date = new JTextField();
-		Date.setForeground(SystemColor.desktop);
+		Date.setForeground(Color.BLACK);
 		Date.setBounds(728, 75, 86, 20);
 		panel_7.add(Date);
 		Date.setBackground(Color.WHITE);
@@ -759,7 +761,7 @@ public class Main_page extends JFrame {
 		lblNewLabel_1.setFont(new Font("Calibri", Font.PLAIN, 14));
 		
 		Invoice = new JTextField();
-		Invoice.setForeground(SystemColor.desktop);
+		Invoice.setForeground(Color.BLACK);
 		Invoice.setBounds(728, 29, 86, 20);
 		panel_7.add(Invoice);
 		Invoice.setColumns(10);
@@ -782,10 +784,10 @@ public class Main_page extends JFrame {
 		panel_7.add(lblAddress);
 		
 		textField_5 = new JTextField();
-		textField_5.setForeground(SystemColor.desktop);
+		textField_5.setForeground(Color.BLACK);
 		textField_5.setColumns(10);
 		textField_5.setBackground(Color.WHITE);
-		textField_5.setBounds(170, 88, 151, 20);
+		textField_5.setBounds(158, 83, 163, 20);
 		panel_7.add(textField_5);
 		
 		JLabel lblAddress_2 = new JLabel("Address :");
@@ -795,8 +797,8 @@ public class Main_page extends JFrame {
 		panel_7.add(lblAddress_2);
 		
 		JTextArea textArea = new JTextArea();
-		textArea.setForeground(SystemColor.desktop);
-		textArea.setBounds(170, 111, 151, 44);
+		textArea.setForeground(Color.BLACK);
+		textArea.setBounds(158, 114, 163, 44);
 		panel_7.add(textArea);
 		
 		JButton btnClr = new JButton("Clear");
@@ -810,34 +812,35 @@ public class Main_page extends JFrame {
 				
 			}
 		});
-		btnClr.setBackground(Color.DARK_GRAY);
-		btnClr.setForeground(SystemColor.activeCaption);
+		btnClr.setBackground(Color.WHITE);
+		btnClr.setForeground(Color.BLACK);
 		btnClr.setBounds(728, 114, 89, 23);
 		panel_7.add(btnClr);
 		
 		panel = new JPanel();
 		panel.setForeground(SystemColor.activeCaption);
 		panel.setBorder(new LineBorder(Color.LIGHT_GRAY, 2, true));
-		panel.setBackground(Color.DARK_GRAY);
+		panel.setBackground(SystemColor.textHighlight);
 		panel.setBounds(10, 11, 865, 115);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblNewLabel_3 = new JLabel("Costcutter Billing System");
 		lblNewLabel_3.setBounds(470, 11, 370, 33);
-		lblNewLabel_3.setForeground(SystemColor.activeCaption);
+		lblNewLabel_3.setForeground(Color.WHITE);
 		lblNewLabel_3.setFont(new Font("Verdana", Font.BOLD, 26));
 		panel.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\eclipse-workspace\\Software_Design_4.1\\1.png"));
-		lblNewLabel.setBounds(22, 11, 206, 93);
-		panel.add(lblNewLabel);
-		
 		lblNewLabel_4 = new JLabel("Dublin Road, Athlone");
-		lblNewLabel_4.setForeground(Color.LIGHT_GRAY);
-		lblNewLabel_4.setBounds(711, 44, 126, 24);
+		lblNewLabel_4.setForeground(Color.WHITE);
+		lblNewLabel_4.setBounds(706, 42, 134, 24);
 		panel.add(lblNewLabel_4);
+		
+		JLabel lblcost = new JLabel(" ");
+		Image images = new ImageIcon(this.getClass().getResource("/1.png")).getImage();
+		lblcost.setIcon(new ImageIcon(images));
+		lblcost.setBounds(44, 11, 216, 87);
+		panel.add(lblcost);
 		
 		
 	}
